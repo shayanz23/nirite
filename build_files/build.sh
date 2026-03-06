@@ -12,6 +12,12 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
+dnf5 install -y niri
+
+dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+
+dnf5 install -y noctalia
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
