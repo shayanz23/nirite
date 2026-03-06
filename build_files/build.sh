@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux niri kitty kitty-terminfo wl-clipboard cliphist nautilus gnome-system-monitor papirus-icon-theme kanshi xdg-desktop-portal-gnome gnome-keyring
+dnf5 install -y tmux niri kitty kitty-terminfo wl-clipboard nautilus gnome-system-monitor papirus-icon-theme kanshi xdg-desktop-portal-gnome gnome-keyring
 
 sed -i '0,/enabled=0/s/enabled=0/enabled=1/' /etc/yum.repos.d/terra.repo
 
