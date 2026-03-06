@@ -14,9 +14,13 @@ dnf5 install -y tmux
 
 dnf5 install -y niri
 
-dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+dnf5 install -y kitty
 
-dnf5 install -y noctalia
+dnf5 install -y kitty-terminfo
+
+sed -i '0,/enabled=0/s/enabled=0/enabled=1/' /etc/yum.repos.d/terra.repo
+
+dnf5 install -y noctalia-shell
 
 # Use a COPR Example:
 #
