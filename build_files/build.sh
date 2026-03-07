@@ -16,8 +16,6 @@ sed -i '0,/enabled=0/s/enabled=0/enabled=1/' /etc/yum.repos.d/terra.repo
 
 dnf5 install -y noctalia-shell
 
-sed -i '0,/enabled=1/s/enabled=1/enabled=0/' /etc/yum.repos.d/terra.repo
-
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
